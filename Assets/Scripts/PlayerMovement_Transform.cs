@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMovement_Transform : MonoBehaviour
 {
     public Vector3 tempPos;
+    public float movement;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,43 +26,50 @@ public class PlayerMovement_Transform : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
             tempPos = transform.position;
-            tempPos.y += 1f;
+            tempPos.y += movement;
             transform.position = tempPos;
-
         }
         if (Input.GetKey(KeyCode.A))
         {
             tempPos = transform.position;
-            tempPos.x -= 1f;
+            tempPos.x -= movement;
             transform.position = tempPos;
         }
         if (Input.GetKey(KeyCode.S))
         {
             tempPos = transform.position;
-            tempPos.y -= 1f;
+            tempPos.y -= movement;
             transform.position = tempPos;
         }
         if (Input.GetKey(KeyCode.D))
         {
             tempPos = transform.position;
-            tempPos.x += 1f;
+            tempPos.x += movement;
             transform.position = tempPos;
         }
         if (Input.GetKey(KeyCode.UpArrow))
         {
-            
+            tempPos = transform.position;
+            tempPos.y += movement;
+            transform.position = tempPos;
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            
+            tempPos = transform.position;
+            tempPos.x -= movement;
+            transform.position = tempPos;
         }
         if (Input.GetKey(KeyCode.DownArrow))
         {
-            
+            tempPos = transform.position;
+            tempPos.y -= movement;
+            transform.position = tempPos;
         }
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            
+            tempPos = transform.position;
+            tempPos.x += movement;
+            transform.position = tempPos;
         }
     }
 }
